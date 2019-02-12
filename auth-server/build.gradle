@@ -1,0 +1,17 @@
+group 'my.tocker.jwtauth'
+version '0.0.1-SNAPSHOT'
+
+jar {
+    baseName = 'auth-server'
+    exclude("build/**")
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile('org.springframework.boot:spring-boot-starter-web')
+    compile('org.springframework.cloud:spring-cloud-starter-security')
+    compile('org.springframework.cloud:spring-cloud-starter-oauth2')
+}

@@ -1,0 +1,6 @@
+rootProject.name = 'springboot2-oauth-jwt'
+include 'mutate-server'
+include 'database'
+include 'auth-server'
+include 'resource-server'
+

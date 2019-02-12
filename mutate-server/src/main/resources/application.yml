@@ -1,0 +1,45 @@
+server:
+  tomcat:
+    uri-encoding: UTF-8
+  port: 80
+
+resource:
+  id: tocker-resource
+
+spring:
+  jpa:
+    database: mysql
+  datasource:
+    jdbc-url:
+    username:
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+# TODO: resource서버를 나누는 경우 keypair 사용
+#security:
+#  oauth2:
+#    resource:
+#      jwt:
+#        key-value:
+#          -----BEGIN CERTIFICATE-----
+#          MIIDYzCCAkugAwIBAgIEXgyN3DANBgkqhkiG9w0BAQsFADBiMQswCQYDVQQGEwI4
+#          MjEPMA0GA1UECBMGdG9ja2VyMQ8wDQYDVQQHEwZ0b2NrZXIxDzANBgNVBAoTBnRv
+#          Y2tlcjEPMA0GA1UECxMGdG9ja2VyMQ8wDQYDVQQDEwZ0b2NrZXIwHhcNMTgxMTEz
+#          MDQyNzM0WhcNMTkwMjExMDQyNzM0WjBiMQswCQYDVQQGEwI4MjEPMA0GA1UECBMG
+#          dG9ja2VyMQ8wDQYDVQQHEwZ0b2NrZXIxDzANBgNVBAoTBnRvY2tlcjEPMA0GA1UE
+#          CxMGdG9ja2VyMQ8wDQYDVQQDEwZ0b2NrZXIwggEiMA0GCSqGSIb3DQEBAQUAA4IB
+#          DwAwggEKAoIBAQC9hpVFSwcxcxv7eL4FE4Zd6syu1X8bhcWq+E4tp6v+ADIXD4mj
+#          DCHAOED/gHOTC52AS8y71dVwXqArPtqR5VhWovNXvW352u0IywGjCu6fQ/dFn5df
+#          /FDkBWgOBlmyWUjdusuoqyWGoHUXBOUbFkvbtrTqxgfG7qwnDpeLxAu6/lQd9wqI
+#          yV+ijyyf0pP1kvDSvw6OgUFgZsFz02f+FZdqjRW/TLwclJS/c83G43EJ4mr/TzPe
+#          AkVQPubIpmPDoUMw0p9vPPTHWPRldvdMeoZnDuhXWXUC629qNbHa2klXT24NHTgI
+#          FoM/uxG7M0AG/khfwL3GNrBVuY9zY+XRyKpHAgMBAAGjITAfMB0GA1UdDgQWBBSh
+#          pqSG+/NvQD31z0EpxQ1cSdqaFzANBgkqhkiG9w0BAQsFAAOCAQEAtSjHEUMlU69c
+#          AFy2D7D+/ZVI1B6x20FDsSM7nPiDrz45b7iPLLZeEk/UIuT/fAItb6VuBkmaZvF9
+#          I9c/O5TYrgaqHa6CuezGPU+Gu++tlBj3jTHYJRPvfEzO77yGlzUIGEPDixKgbLHM
+#          TexU88CBauBXPKidMHLEaJ/J9XPBhHY6SoJu1knDNHc8WDCjNo9Rbe7KIlsdAQnx
+#          jdeRxhIAP0wkSIMhPPm5XIYDzjZcm5cHcv5hSyfan9UpRy/rfNyeG4A1BOgggWOI
+#          5V7dJIcZq/zsEYCsqVgNh9NYifgKEGW5CJxKEV5ySJ0/W8c3QvNU6bxU1xSGA/2x
+#          SAk7JWIKsw==
+#          -----END CERTIFICATE-----
+#

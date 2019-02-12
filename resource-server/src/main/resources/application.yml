@@ -1,0 +1,25 @@
+server:
+  tomcat:
+    uri-encoding: UTF-8
+  port: 8082
+
+resource:
+  id: tocker-resource
+
+# TODO: resource서버를 나누는 경우 keypair 사용
+security:
+  oauth2:
+    resource:
+      jwt:
+        key-value:
+          -----BEGIN PUBLIC KEY-----
+          MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAr+ABqxdj0/4MFuUVD2MH
+          cqRz18xIjm6/2WvsKD7kZh1gt3WunaZc2MIJlplGWmQBYsT8Wa2avLuxtTi+fYms
+          3u8SaQ9XAlY61nNoH2VPhngW58C1Z3GeRPtSPy54j2rSvhIpV4MBPiPH+cCRfHgO
+          30MVYIZ4aLqg+j8NdEBugZaVDikehdhZ+fUnT4WrVZ6Gcxlrzifc/6ilQozwWGq/
+          i3fHwC+tNax1gNwm/qQL29kLg2L/VZa8ZfeZWAXzmD/ce51SV0UmE7NnEotGcXTD
+          C3b4KeYwG/BdZkFwuH55J4DAuhS8sfsFX/sWqJRYNEcViMLoNfl0aMEADWHkJD+c
+          yQIDAQAB
+          -----END PUBLIC KEY-----
+
+

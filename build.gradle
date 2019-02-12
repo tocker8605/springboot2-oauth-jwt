@@ -1,0 +1,53 @@
+buildscript {
+    ext {
+        springBootVersion = '2.1.0.RELEASE'
+        dependencyManagementVersion = '1.0.6.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath "io.spring.gradle:dependency-management-plugin:${dependencyManagementVersion}"
+    }
+}
+
+allprojects {
+    apply plugin: 'java'
+    apply plugin: 'eclipse'
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+    sourceCompatibility = 1.8
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencyManagement {
+        imports {
+            mavenBom 'org.springframework.cloud:spring-cloud-dependencies:Finchley.RELEASE'
+        }
+    }
+
+    dependencies {
+        compileOnly('org.projectlombok:lombok')
+        testCompile('org.springframework.boot:spring-boot-starter-test')
+    }
+}
+
+project(':mutate-server') {
+    dependencies {
+        compile project(':database')
+    }
+}
+
+
+project(':auth-server') {
+    dependencies {
+        compile project(':database')
+    }
+}
+
+project(':resource-server') {
+
+}
